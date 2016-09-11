@@ -25,4 +25,6 @@ biglogo     : Logo advatica.png
 
 This is slide 2
 
+Go to [advatica web page] (http://advatica.com/ "ADVATICA")
+
 
