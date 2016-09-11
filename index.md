@@ -3,12 +3,14 @@ title       : Slidify test deck
 subtitle    : to be published in github
 author      : vicarizmendi
 job         : Telecom Engineer
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : io2012       # {io2012, html5slides, shower, dzslides, landslide,   ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+logo        : logo_VA_PNG.png
+biglogo     : Logo advatica.png
 ---
 
 ## Read-And-Delete
@@ -21,6 +23,6 @@ knit        : slidify::knit2slides
 
 ## Slide 2
 
-
+This is slide 2
 
 
