@@ -1,8 +1,8 @@
 ---
 title       : Coursera Developing Data Products 
 subtitle    : Course Project Slidify presentation
-author      : vicarizmendi
-job         : telecom engineer becoming data scientist
+author      : "22 septiembre, 2016"
+job         : vicarizmendi  - telecom engineer becoming data scientist
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -23,7 +23,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 - By changing the controls on the left sidebar panel you can change colors and height of the 3D plot. Note that when clicking the default colors checkbox, the colors selection is ignored
 
 --- .class #id
-## Course Project Ideas for the App
+## Course Project ideas for the App
 
 
 1. Create a simple Shiny App including the requirements requested:
@@ -43,9 +43,9 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- .class #id 
 
-## Course Project Ideas for the presentation
+## Course Project ideas for the presentation
 
-3. Producing a presentation of the App with Slidify
+3. The App presentation with Slidify, and published in github [http://vicarizmendi.github.io] (http://vicarizmendi.github.io)
 
 2. Adding my logo ![width](Logo_advatica.png) 
 
