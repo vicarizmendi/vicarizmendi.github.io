@@ -47,7 +47,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 3. Producing a presentation of the App with Slidify
 
-2. My logo ![width](logo_advatica.png) 
+2. My logo ![width](Logo_advatica.png) 
 
 3. Link to the App shinyapp.io site [https://advatica.shinyapps.io/DataProject/] (https://advatica.shinyapps.io/DataProject/)
   
