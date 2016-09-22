@@ -1,30 +1,90 @@
 ---
-title       : Slidify test deck
-subtitle    : to be published in github
+title       : Coursera Developing Data Products 
+subtitle    : Course Project Slidify presentation
 author      : vicarizmendi
-job         : Telecom Engineer
-framework   : io2012       # {io2012, html5slides, shower, dzslides, landslide,   ...}
+job         : telecom engineer becoming data scientist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [bootstrap, quiz, shiny, interactive, mathjax] # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 logo        : logo_VA_PNG.png
-biglogo     : Logo advatica.png
----
+ext_widgets : {rCharts: [libraries/nvd3]}
 
-## Read-And-Delete
+--- .class #id
+## App functionality description
+- The shiny App shows an interactive 3D plot in different colors and heights 
+- The plot represents the Maunga Whau Volvano in 3D. Another dataset can be selected "zeta"
+- The dataset - volcano- is available in the `datasets` R package  
+- The dataset - zeta - is included in the code and is taken from [examples of plot.ly](https://plot.ly/r/3d-surface-plots/) 
+- The App code can be easily changed to plot, for instance, predictive models with 2 predictors, being x and y the predictors and z the predicted response
+- You can select different Plotly dynamic options on the top right icons: zooming,changing the perspective (turntable rotation, orbital rotation), dowloading the plot in png format, and others. To see the icons and move the plot, the mouse has to be on the plot itself
+- By changing the controls on the left sidebar panel you can change colors and height of the 3D plot. Note that when clicking the default colors checkbox, the colors selection is ignored
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+--- .class #id
+## Course Project Ideas for the App
+
+
+1. Create a simple Shiny App including the requirements requested:
+
+        * Different input types: slider, checkbox, selection box
+        * Reactive operations
+        * Instructions selfcontained on the App
+
+2. Testing the inclusion of dynamic functionality of plot.ly jointly with Shiny 
+
+        * Dynamic plot  - Plot.ly
+        * Dowload image in .png - Plot.ly
+        * Changing dataset, colors and sizes - Shiny
+
+
+
 
 --- .class #id 
 
-## Slide 2
+## Course Project Ideas for the presentation
 
-This is slide 2
+3. Producing a presentation of the App with Slidify
 
-Go to [advatica web page] (http://advatica.com/ "ADVATICA")
+2. My logo  <div style='text-align: left;'> <img height='560' src='assets/img/logo advatica.png' /> </div>  
+
+3. Link to the App shinyapp.io site [https://advatica.shinyapps.io/DataProject/] (https://advatica.shinyapps.io/DataProject/)
+  
+
+3. Link to the server.R and ui.R code on github [https://github.com/vicarizmendi/DataProject] (https://github.com/vicarizmendi/DataProject)
+
+        
+5. Inclusion of code chuncks with plot.ly plot and a shiny basic App with plotly
+
+```r
+require(plotly)
+require(webshot)
+webshot::install_phantomjs()
+require(ggplot2)
+plot_ly(z = volcano , type = "surface")
+```
+  
+  
+
+--- .class #id
+
+Volcano plot using Plot.ly. The plot generated cannot be included in the presentation because Webgl is not supported. So, I include the code with eval=F. Anyway the code itself can be run and the plotly plot seen.  
 
 
+
+```r
+library(shiny)
+library(plotly)
+library(ggplot2)
+server<- function(input, output) {
+        output$newHist <- renderPlotly({
+        plot_ly(z = volcano , type = "surface")
+        })}
+ui<- fluidPage(
+        plotlyOutput('newHist'))
+shinyApp(ui = ui, server = server)
+```
+
+Using plot.ly with Shiny. renderPlotly() and plotlyOutput() functions have to be used
+  
