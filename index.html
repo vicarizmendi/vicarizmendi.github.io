@@ -103,7 +103,7 @@
   <article data-timings="">
     <ol>
 <li><p>Producing a presentation of the App with Slidify</p></li>
-<li><p>My logo <img src="Logo_advatica.png" alt="width"> </p></li>
+<li><p>Adding my logo <img src="Logo_advatica.png" alt="width"> </p></li>
 <li><p>Link to the App shinyapp.io site <a href="https://advatica.shinyapps.io/DataProject/">https://advatica.shinyapps.io/DataProject/</a></p></li>
 <li><p>Link to the server.R and ui.R code on github <a href="https://github.com/vicarizmendi/DataProject">https://github.com/vicarizmendi/DataProject</a></p></li>
 <li><p>Inclusion of code chuncks with plot.ly plot and a shiny basic App with plotly</p></li>
@@ -124,6 +124,8 @@ plot_ly(z = volcano , type = &quot;surface&quot;)
   <article data-timings="">
     <p>Volcano plot using Plot.ly. The plot generated cannot be included in the presentation because Webgl is not supported. So, I include the code with eval=F. Anyway the code itself can be run and the plotly plot seen.  </p>
 
+<p>Shiny reduced example using plot.ly. renderPlotly() and plotlyOutput() functions have to be used instead of renderPlot() and plotOutput() functions:  </p>
+
 <pre><code class="r">library(shiny)
 library(plotly)
 library(ggplot2)
@@ -135,8 +137,6 @@ ui&lt;- fluidPage(
         plotlyOutput(&#39;newHist&#39;))
 shinyApp(ui = ui, server = server)
 </code></pre>
-
-<p>Using plot.ly with Shiny. renderPlotly() and plotlyOutput() functions have to be used</p>
 
   </article>
   <!-- Presenter Notes -->

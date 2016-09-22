@@ -47,7 +47,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 3. Producing a presentation of the App with Slidify
 
-2. My logo ![width](Logo_advatica.png) 
+2. Adding my logo ![width](Logo_advatica.png) 
+
 
 3. Link to the App shinyapp.io site [https://advatica.shinyapps.io/DataProject/] (https://advatica.shinyapps.io/DataProject/)
   
@@ -71,6 +72,9 @@ plot_ly(z = volcano , type = "surface")
 Volcano plot using Plot.ly. The plot generated cannot be included in the presentation because Webgl is not supported. So, I include the code with eval=F. Anyway the code itself can be run and the plotly plot seen.  
 
 
+
+Shiny reduced example using plot.ly. renderPlotly() and plotlyOutput() functions have to be used instead of renderPlot() and plotOutput() functions:  
+
 ```{r results = 'asis', commment = NA, message = F, echo = T, eval = F}
 library(shiny)
 library(plotly)
@@ -84,5 +88,4 @@ ui<- fluidPage(
 shinyApp(ui = ui, server = server)
 ```
 
-Using plot.ly with Shiny. renderPlotly() and plotlyOutput() functions have to be used
   

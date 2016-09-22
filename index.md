@@ -47,7 +47,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 3. Producing a presentation of the App with Slidify
 
-2. My logo ![width](Logo_advatica.png) 
+2. Adding my logo ![width](Logo_advatica.png) 
+
 
 3. Link to the App shinyapp.io site [https://advatica.shinyapps.io/DataProject/] (https://advatica.shinyapps.io/DataProject/)
   
@@ -73,6 +74,9 @@ Volcano plot using Plot.ly. The plot generated cannot be included in the present
 
 
 
+Shiny reduced example using plot.ly. renderPlotly() and plotlyOutput() functions have to be used instead of renderPlot() and plotOutput() functions:  
+
+
 ```r
 library(shiny)
 library(plotly)
@@ -86,5 +90,4 @@ ui<- fluidPage(
 shinyApp(ui = ui, server = server)
 ```
 
-Using plot.ly with Shiny. renderPlotly() and plotlyOutput() functions have to be used
   
